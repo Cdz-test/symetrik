@@ -1,0 +1,270 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syme†rik.io - UI Design Repository</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #8A2BE2, #FFD700);
+        }
+        .nav-link:hover {
+            color: #FFD700;
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+        .section-title {
+            background: linear-gradient(90deg, #8A2BE2, #FFD700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+        }
+        .button-hover:hover {
+            background: linear-gradient(90deg, #FFD700, #8A2BE2);
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
+    </style>
+<meta name="description" content="yeah"></head>
+<body class="bg-gray-100">
+    <nav class="bg-purple-800 text-white p-4 fixed w-full z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-bezier-curve text-2xl mr-2 text-yellow-400"></i>
+                <span class="text-xl font-bold">Syme†rik.io</span>
+            </div>
+            <ul class="flex space-x-6">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#designs" class="nav-link">Designs</a></li>
+                <li><a href="#resources" class="nav-link">Resources</a></li>
+                <li><a href="#community" class="nav-link">Community</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home" class="hero-gradient text-white min-h-screen flex items-center">
+        <div class="container mx-auto text-center px-4">
+            <h1 class="text-5xl font-bold mb-6">Welcome to <span class="text-yellow-400">Syme†rik.io</span></h1>
+            <p class="text-xl mb-8">Discover, Create, and Share Stunning UI Designs</p>
+            <a href="#designs" class="bg-white text-purple-800 py-3 px-8 rounded-full font-bold text-lg button-hover">Explore Designs</a>
+        </div>
+    </header><section class="bg-gray-100 p-10 rounded-lg shadow-lg">
+    <div class="text-center mb-6">
+        <h1 class="text-4xl font-bold text-blue-600">About DataWave Analytics</h1>
+    </div>
+    <div class="space-y-4">
+        <p class="text-lg text-gray-700">DataWave Analytics is a leading firm in data analysis and business intelligence.</p>
+        <p class="text-lg text-gray-700">We provide comprehensive data solutions to help businesses make informed decisions.</p>
+        <p class="text-lg text-gray-700">Our team of experts leverages cutting-edge technology to deliver actionable insights.</p>
+        <p class="text-lg text-gray-700">Join us on a journey to transform data into valuable business assets.</p>
+    </div>
+</section><script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const paragraphs = document.querySelectorAll('section p');
+        paragraphs.forEach((p, i) => {
+            const words = p.textContent.split(' ');
+            p.innerHTML = words.map(word => `<span class="inline-block">${word}</span>`).join(' ');
+            const spans = p.querySelectorAll('span');
+            spans.forEach((span, j) => {
+                span.style.display = 'inline-block';
+                span.style.transition = 'transform 0.3s';
+                setTimeout(() => {
+                    span.style.transform = 'translateY(-10px)';
+                    setTimeout(() => {
+                        span.style.transform = 'translateY(0)';
+                    }, 300);
+                }, j * 100 + i * 500);
+            });
+        });
+    });
+</script>
+
+    <section id="designs" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center section-title">Featured Designs</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://via.placeholder.com/400x300" alt="UI Design 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Minimalist Dashboard</h3>
+                        <p class="text-gray-600 mb-4">A clean and intuitive dashboard design focusing on data visualization and user experience.</p>
+                        <a href="#" class="text-purple-600 font-semibold hover:text-yellow-400">View Design</a>
+                    </div>
+                </div>
+                <div class="card bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://via.placeholder.com/400x300" alt="UI Design 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">E-commerce Mobile App</h3>
+                        <p class="text-gray-600 mb-4">A sleek and modern e-commerce app design optimized for mobile shopping experiences.</p>
+                        <a href="#" class="text-purple-600 font-semibold hover:text-yellow-400">View Design</a>
+                    </div>
+                </div>
+                <div class="card bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://via.placeholder.com/400x300" alt="UI Design 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Social Media Redesign</h3>
+                        <p class="text-gray-600 mb-4">A fresh take on social media interfaces, focusing on user engagement and content discovery.</p>
+                        <a href="#" class="text-purple-600 font-semibold hover:text-yellow-400">View Design</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><section class="bg-gray-900 text-white py-20">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-12 text-center">Gaming</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-gray-800 p-6 rounded-lg transform transition duration-500 hover:scale-105">
+        <img src="https://via.placeholder.com/300" alt="Game 1" class="w-full h-48 object-cover rounded-t-lg">
+        <h3 class="text-2xl font-semibold mt-4">Game Title 1</h3>
+        <p class="mt-2 text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">Play Now</button>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg transform transition duration-500 hover:scale-105">
+        <img src="https://via.placeholder.com/300" alt="Game 2" class="w-full h-48 object-cover rounded-t-lg">
+        <h3 class="text-2xl font-semibold mt-4">Game Title 2</h3>
+        <p class="mt-2 text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">Play Now</button>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg transform transition duration-500 hover:scale-105">
+        <img src="https://via.placeholder.com/300" alt="Game 3" class="w-full h-48 object-cover rounded-t-lg">
+        <h3 class="text-2xl font-semibold mt-4">Game Title 3</h3>
+        <p class="mt-2 text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">Play Now</button>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg transform transition duration-500 hover:scale-105">
+        <img src="https://via.placeholder.com/300" alt="Game 4" class="w-full h-48 object-cover rounded-t-lg">
+        <h3 class="text-2xl font-semibold mt-4">Game Title 4</h3>
+        <p class="mt-2 text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">Play Now</button>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg transform transition duration-500 hover:scale-105">
+        <img src="https://via.placeholder.com/300" alt="Game 5" class="w-full h-48 object-cover rounded-t-lg">
+        <h3 class="text-2xl font-semibold mt-4">Game Title 5</h3>
+        <p class="mt-2 text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">Play Now</button>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg transform transition duration-500 hover:scale-105">
+        <img src="https://via.placeholder.com/300" alt="Game 6" class="w-full h-48 object-cover rounded-t-lg">
+        <h3 class="text-2xl font-semibold mt-4">Game Title 6</h3>
+        <p class="mt-2 text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">Play Now</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="resources" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center section-title">UI Design Resources</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <i class="fas fa-palette text-4xl text-purple-600 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-4">Color Palettes</h3>
+                    <p class="text-gray-600 mb-4">Explore our curated collection of color palettes to inspire your next design project. From vibrant and bold to subtle and sophisticated, find the perfect color scheme for your UI.</p>
+                    <a href="#" class="text-purple-600 font-semibold hover:text-yellow-400">Browse Palettes</a>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <i class="fas fa-vector-square text-4xl text-purple-600 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-4">UI Kits</h3>
+                    <p class="text-gray-600 mb-4">Download high-quality UI kits to jumpstart your design process. Our kits include a wide range of components and layouts for various applications and platforms.</p>
+                    <a href="#" class="text-purple-600 font-semibold hover:text-yellow-400">Explore UI Kits</a>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <i class="fas fa-font text-4xl text-purple-600 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-4">Typography Guide</h3>
+                    <p class="text-gray-600 mb-4">Master the art of typography in UI design with our comprehensive guide. Learn about font pairing, hierarchy, and best practices for readability and visual appeal.</p>
+                    <a href="#" class="text-purple-600 font-semibold hover:text-yellow-400">Read Guide</a>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <i class="fas fa-lightbulb text-4xl text-purple-600 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-4">Design Inspiration</h3>
+                    <p class="text-gray-600 mb-4">Get inspired by our collection of outstanding UI designs from around the web. Discover new trends, innovative layouts, and creative solutions to common design challenges.</p>
+                    <a href="#" class="text-purple-600 font-semibold hover:text-yellow-400">Find Inspiration</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="community" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center section-title">Join Our Community</h2>
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://via.placeholder.com/600x400" alt="Community" class="rounded-lg shadow-lg">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h3 class="text-2xl font-semibold mb-4">Connect with Fellow Designers</h3>
+                    <p class="text-gray-600 mb-6">Join our thriving community of UI designers, where you can share your work, get feedback, and collaborate on exciting projects. Participate in design challenges, attend virtual meetups, and stay up-to-date with the latest trends in UI design.</p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Share your portfolio and get constructive feedback</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Participate in weekly design challenges</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Attend virtual workshops and webinars</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Network with industry professionals</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="bg-purple-600 text-white py-3 px-8 rounded-full font-bold text-lg button-hover inline-block">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-purple-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">About Syme†rik.io</h4>
+                    <p class="text-gray-300">We are passionate about empowering designers to create beautiful and functional user interfaces. Join our community and take your UI design skills to the next level.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-yellow-400">Home</a></li>
+                        <li><a href="#designs" class="text-gray-300 hover:text-yellow-400">Designs</a></li>
+                        <li><a href="#resources" class="text-gray-300 hover:text-yellow-400">Resources</a></li>
+                        <li><a href="#community" class="text-gray-300 hover:text-yellow-400">Community</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Connect</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-yellow-400"><i class="fab fa-twitter mr-2"></i>Twitter</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-yellow-400"><i class="fab fa-instagram mr-2"></i>Instagram</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-yellow-400"><i class="fab fa-dribbble mr-2"></i>Dribbble</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-yellow-400"><i class="fab fa-linkedin mr-2"></i>LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Newsletter</h4>
+                    <p class="text-gray-300 mb-4">Stay updated with the latest UI design trends and resources.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="py-2 px-4 rounded-l-full w-full focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                        <button type="submit" class="bg-yellow-400 text-purple-800 py-2 px-4 rounded-r-full font-semibold hover:bg-yellow-300 transition duration-300">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <p>© 2023 Syme†rik.io. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body></html>
